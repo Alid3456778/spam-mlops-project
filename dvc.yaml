@@ -1,0 +1,16 @@
+stages:
+  preprocess:
+    cmd: python src/data/preprocess.py
+    deps:
+    - data/raw/spam.csv
+    - src/data/preprocess.py
+    outs:
+    - data/processed/clean_spam.csv
+    
+  train:
+    cmd: python src/training/train_model.py
+    deps:
+    - data/processed/clean_spam.csv
+    - src/training/train_model.py
+    outs:
+    - models/spam_model.pkl
