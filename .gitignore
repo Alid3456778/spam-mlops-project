@@ -45,7 +45,7 @@ mlruns/
 # Local model and dataset artifacts (also handled by nested .gitignore files)
 *.pkl
 *.joblib
-*.csv
+
 
 # Docker / compose local overrides
 docker-compose.override.yml
