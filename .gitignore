@@ -1,50 +1,5 @@
 # Python bytecode / caches
 api/__pycache__/
-__pycache__/
-*.py[cod]
-*$py.class
-
-# Virtual environments
-.venv/
-venv/
-env/
-
-# Tool caches
-.pytest_cache/
-.mypy_cache/
-.ruff_cache/
-.ipynb_checkpoints/
-
-# Build / packaging
-build/
-dist/
-*.egg-info/
-.eggs/
-
-# Logs and local runtime files
-*.log
-*.pid
-
-# Environment / secrets
-.env
-.env.*
-!.env.example
-
-# OS / editor files
-.DS_Store
-Thumbs.db
-.vscode/
-.idea/
-
-# DVC local cache (large, machine-specific)
-.dvc/cache/
-
-# MLflow local artifacts
-mlruns/
-
-# Local model and dataset artifacts (also handled by nested .gitignore files)
-*.pkl
-*.joblib
 
 
 # Docker / compose local overrides
