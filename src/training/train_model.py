@@ -1,5 +1,6 @@
 import pandas as pd
 import pickle
+import mlflow
 
 from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
 from sklearn.feature_extraction.text import CountVectorizer
@@ -24,10 +25,22 @@ def main():
     X_train, X_test, y_train, y_test = train_test_split(
         X_vectorized, y, test_size=0.2, random_state=42
     )
+    with mlflow.start_run():
+        model = MultinomialNB()
+        model.fit(X_train, y_train)
+
+        predictions = model.predict(X_test)
+
+        accuracy = accuracy_score(y_test, predictions)
+
+        print("Model Accuracy:", accuracy)
+
+        mlflow.log_param("model_type", "MultinomialNB")
+        mlflow.log_metric("accuracy", accuracy)
 
     # Train model
-    model = MultinomialNB()
-    model.fit(X_train, y_train)
+    # model = MultinomialNB()
+    # model.fit(X_train, y_train)
 
     # Predict on test data
     predictions = model.predict(X_test)

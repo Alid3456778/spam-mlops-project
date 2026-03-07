@@ -21,3 +21,13 @@ SO now we have also stage the Model trainging thing , like simple we use to trai
             -o models/spam_model.pkl \
             python src/training/train_model.py
 
+2. MLFlow :
+it does to add experement tracking and whenever you run the training model or code it save that this time the accuracy is this much and this much 
+(You can see that in traning folder file i have added this)
+
+            | Run   | Model      | Accuracy |
+            | ----- | ---------- | -------- |
+            | Run 1 | NaiveBayes | 0.75     |
+            | Run 2 | NaiveBayes | 0.78     |
+
+You are now saving and Tracking the Model Accuracy with the help of the MLFlow 
