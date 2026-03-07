@@ -1,6 +1,0 @@
-# Python bytecode / caches
-api/__pycache__/
-
-
-# Docker / compose local overrides
-docker-compose.override.yml
