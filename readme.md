@@ -57,6 +57,14 @@ so we create an Docker file which will contanarise ower application in simple st
     5.How to start the Application
 
 and when the image is formed we just simple run (Build) it and set the PORT and acees it 
+    BUILD :
+        docker build -t spam-ml-api -f docker/Dockerfile .
+
+    IMAGE :
+        docker run -p 8000:8000 spam-ml-api
+
+    VIEW :
+        http://localhost:8000/docs
 
 5.GitAction:
 It is a way of automatic building and testing thing and every thing from building to using the application it comes under this file with each command.
@@ -64,4 +72,15 @@ So in this the full working application comes and have everything in it from dep
 Some users add the test file so before production hit we can check wether the code is working or crash out .
 Its a practice that we should do avoid the error , its like the Last safe check test which do everything that we need to do and deploy it .
 It run automatically when we just push it to the intented Branch which i have is "main" we can also set it onto pull condition also .
+
+
+            IF YOU WANT , COPY MY REPO AND RUN THE DOCKER AND SEE INTO THE 8080 PORT
+                REQUEST URL :
+                    http://localhost:8000/predict?message=YOURMESSAGE
+
+                CURL :
+                    curl -X 'POST' \
+                    'http://localhost:8000/predict?message=YOURMESSAGE' \
+                    -H 'accept: application/json' \
+                    -d ''
 
