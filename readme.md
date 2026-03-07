@@ -49,11 +49,19 @@ So from running the file from the python to accessing the code from the website 
 4.Docker :
 As the comapny employee says , "IT WORKS ON MY COMPUTER" its a thing that is very funny and idotic at the same time how can you say that it works on my machine and not yours  .
 to solve this the Docker and Docker Conatiners come in image (Did you see how i put image inside the sentence 😁 ).
-so we create an Docker file which will contanarise ower application in simple step of installation , what it does is get all your thing (commands) to start the application and put it into the file like 
-    which Directory
-    which Files
-    Where in the Docker
-    What Depemdencys
-    How to start the Application
+so we create an Docker file which will contanarise ower application in simple step of installation , what it does is get all your thing (commands) to start the application and put it into the file like :
+    1.which Directory
+    2.which Files
+    3.Where in the Docker
+    4.What Depemdencys
+    5.How to start the Application
 
 and when the image is formed we just simple run (Build) it and set the PORT and acees it 
+
+5.GitAction:
+It is a way of automatic building and testing thing and every thing from building to using the application it comes under this file with each command.
+So in this the full working application comes and have everything in it from dependencys to docker build command .
+Some users add the test file so before production hit we can check wether the code is working or crash out .
+Its a practice that we should do avoid the error , its like the Last safe check test which do everything that we need to do and deploy it .
+It run automatically when we just push it to the intented Branch which i have is "main" we can also set it onto pull condition also .
+
