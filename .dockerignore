@@ -1,0 +1,29 @@
+# VCS and local metadata
+.git
+.dvc
+*.dvc
+
+# Python artifacts
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+.venv/
+venv/
+
+# Project folders not needed at runtime
+notebooks/
+src/
+data/
+
+# Build/test clutter
+.pytest_cache/
+.mypy_cache/
+.coverage
+
+# Docs/config not needed in container runtime
+readme.md
+dvc.yaml
+dvc.lock

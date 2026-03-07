@@ -44,3 +44,16 @@ this will start the api and host it into the local at 8000
         |> this is to access the website api , and there is the POST  option this will use to get the message will use to run
     
 So from running the file from the python to accessing the code from the website localhost
+
+
+4.Docker :
+As the comapny employee says , "IT WORKS ON MY COMPUTER" its a thing that is very funny and idotic at the same time how can you say that it works on my machine and not yours  .
+to solve this the Docker and Docker Conatiners come in image (Did you see how i put image inside the sentence 😁 ).
+so we create an Docker file which will contanarise ower application in simple step of installation , what it does is get all your thing (commands) to start the application and put it into the file like 
+    which Directory
+    which Files
+    Where in the Docker
+    What Depemdencys
+    How to start the Application
+
+and when the image is formed we just simple run (Build) it and set the PORT and acees it 
