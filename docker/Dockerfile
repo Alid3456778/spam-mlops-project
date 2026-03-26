@@ -10,7 +10,7 @@ WORKDIR /app
 
 # Install only runtime dependencies required by api/app.py
 # (mlflow and pandas removed to reduce image size)
-RUN pip install --no-cache-dir fastapi uvicorn scikit-learn
+RUN pip install --no-cache-dir fastapi uvicorn scikit-learn numpy python-dotenv requests
 
 # Copy only what the API needs at runtime
 COPY api/ /app/api/
