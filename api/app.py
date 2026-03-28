@@ -20,6 +20,7 @@ def home():
 
 
 @app.post("/predict")
+@app.get("/predict")
 def predict(message: str):
 
     message_vector = vectorizer.transform([message])
