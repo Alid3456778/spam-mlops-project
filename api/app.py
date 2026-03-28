@@ -44,8 +44,8 @@ def predict(message: str):
 
 # ---------------- KEEP ALIVE ----------------
 def start_keep_alive():
-    url = os.getenv("RENDER_EXTERNAL_URL")
-
+    #url = os.getenv("https://spam-mlops-project.onrender.com/docs")
+    url = "https://spam-mlops-project.onrender.com"
     if not url:
         print("[KeepAlive] No URL found")
         return
