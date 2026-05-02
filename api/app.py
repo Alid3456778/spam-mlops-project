@@ -41,28 +41,28 @@ def predict(message: str):
 
     return {"prediction": prediction[0]}
 
-# ---------------- KEEP ALIVE ----------------
-def start_keep_alive():
-    url = os.getenv("RENDER_EXTERNAL_URL")
+# # ---------------- KEEP ALIVE ----------------
+# def start_keep_alive():
+#     url = os.getenv("RENDER_EXTERNAL_URL")
 
-    if not url:
-        print("[KeepAlive] No URL found")
-        return
+#     if not url:
+#         print("[KeepAlive] No URL found")
+#         return
 
-    full_url = url + "/health"
+#     full_url = url + "/health"
 
-    def ping():
-        while True:
-            try:
-                res = requests.get(full_url)
-                print(f"[KeepAlive] Ping: {res.status_code}")
-            except Exception as e:
-                print("[KeepAlive Error]", e)
+#     def ping():
+#         while True:
+#             try:
+#                 res = requests.get(full_url)
+#                 print(f"[KeepAlive] Ping: {res.status_code}")
+#             except Exception as e:
+#                 print("[KeepAlive Error]", e)
 
-            time.sleep(600)  # 10 minutes
+#             time.sleep(600)  # 10 minutes
 
-    thread = threading.Thread(target=ping, daemon=True)
-    thread.start()
+#     thread = threading.Thread(target=ping, daemon=True)
+#     thread.start()
 
 
 # Start keep alive when app starts
