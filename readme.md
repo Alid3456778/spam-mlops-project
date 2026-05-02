@@ -1,3 +1,8 @@
+    
+    LIVE LINK
+    https://spam-mlops-project.onrender.com/predict?message=YOURMESSAGE
+
+
 1. DVC Automation  :
 so as the process are to clean the raw data and then save it into the processd folder 
 that is done into the data folder , to do so we have to run the "python preprocess.py python train_model.py"

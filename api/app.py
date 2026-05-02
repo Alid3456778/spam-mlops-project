@@ -33,6 +33,7 @@ def health():
     return {"status": "ok"}
 
 @app.post("/predict")
+@app.get("/predict")
 def predict(message: str):
 
     message_vector = vectorizer.transform([message])
@@ -66,4 +67,4 @@ def predict(message: str):
 
 
 # Start keep alive when app starts
-start_keep_alive()
+# start_keep_alive()

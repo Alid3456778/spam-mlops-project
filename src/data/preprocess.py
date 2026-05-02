@@ -4,6 +4,8 @@ import re
 
 # Function to clean text
 def clean_text(text):
+    if not isinstance(text, str):
+        return ""
     text = text.lower()  # convert to lowercase
     text = re.sub(r'[^a-zA-Z\s]', '', text)  # remove punctuation and numbers
     text = text.strip()  # remove extra spaces
@@ -14,6 +16,9 @@ def main():
 
     # Load raw dataset
     data = pd.read_csv("data/raw/spam.csv")
+
+    # Ensure there are no missing messages
+    data["message"] = data["message"].fillna("")
 
     # Clean the message column
     data["message"] = data["message"].apply(clean_text)
